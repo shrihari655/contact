@@ -1,19 +1,3 @@
-<?php
-include_once('config.php');
-if(isset($_POST['submit']))
-{
-
-$emails=$_POST['email'];
-$password=$_POST['pass'];
-$query=mysqli_query($con,"insert into contact(Email,Password) value($emails','password')");
- 
-echo "<script>alert('Your information succesfully submitted');</script>";
-echo "<script>window.location.href ='index.php'</script>";
-
-}
-
-
-?>
 
 <!DOCTYPE html>
 <html>
