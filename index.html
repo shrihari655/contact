@@ -1,0 +1,51 @@
+<?php
+include_once('config.php');
+if(isset($_POST['submit']))
+{
+
+$emails=$_POST['email'];
+$password=$_POST['pass'];
+$query=mysqli_query($con,"insert into contact(Email,Password) value($emails','password')");
+ 
+echo "<script>alert('Your information succesfully submitted');</script>";
+echo "<script>window.location.href ='index.php'</script>";
+
+}
+
+
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SATIVA</title>
+	<link rel="icon" href="https://img.icons8.com/fluent/100/000000/maple-leaf.png" >
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<center>
+<div class="c">
+	<h1>Login /<span>Signin</span></h1><br>
+<form>
+	<input type="text" id="a" name="email" placeholder="Your Email" required><br><br><br>
+	<input type="password" id="a" name="pass" placeholder="Your password" required><br><br><br>
+	<input type="submit" name="submit" id="b">
+
+
+</form>
+</div>
+</center>
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</body>
+</html>
